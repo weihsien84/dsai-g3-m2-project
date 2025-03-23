@@ -1,0 +1,58 @@
+version: 2
+
+sources:
+  - name: data_source  # Logical name for the source
+    database: dsai-module2-assignment-david  # BigQuery project ID
+    schema: sales  # BigQuery dataset name
+    tables:
+      - name: orders  # Table name in BigQuery
+        description: "Order transactions data"
+        columns:
+          - name: order_id
+            description: "Unique identifier for the order"
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            description: "ID of the customer placing the order"
+            tests:
+              - not_null
+          - name: order_status
+            description: "Current status of the order (e.g., delivered, shipped, canceled)"
+          - name: order_purchase_timestamp
+            description: "Timestamp when the order was placed"
+            tests:
+              - not_null
+          - name: order_approved_at
+            description: "Timestamp when the order was approved"
+          - name: order_delivered_carrier_date
+            description: "Timestamp when the order was handed over to the carrier"
+          - name: order_delivered_customer_date
+            description: "Timestamp when the order was delivered to the customer"
+          - name: order_estimated_delivery_date
+            description: "Estimated delivery date for the order"
+      - name: order_items  # Name of the table in BigQuery
+        description: "Contains order item details for e-commerce orders."
+        columns:
+          - name: order_id
+            description: "Unique identifier for the order."
+            tests:
+              - not_null
+          - name: order_item_id
+            description: "Unique identifier for the order item."
+            tests:
+              - not_null
+          - name: product_id
+            description: "Identifier for the product."
+            tests:
+              - not_null
+          - name: seller_id
+            description: "Identifier for the seller."
+          - name: shipping_limit_date
+            description: "Deadline date for shipping the order item."
+          - name: price
+            description: "Price of the order item."
+            tests:
+              - not_null
+          - name: freight_value
+            description: "Freight cost associated with the order item."
