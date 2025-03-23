@@ -51,7 +51,7 @@ with DAG(
                 mappings.append({
                     'source_objects': [f],
                     'bucket': config['bucket'],
-                    'destination_project_dataset_table': f"adroit-crow-452612-h2.gcs_ingestion.{table}"
+                    'destination_project_dataset_table': f"dsai-g3-m2-project.gcs_ingestion.{table}"
                 })
         return mappings
     
