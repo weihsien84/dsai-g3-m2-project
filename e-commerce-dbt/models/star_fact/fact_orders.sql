@@ -18,7 +18,7 @@ with order_details as (
         o.order_purchase_timestamp,
         o.order_delivered_customer_date,
         o.order_estimated_delivery_date
-    from {{ source('data_source', 'orders') }} as o
+    from {{ source('gcs_ingestion', 'olist_orders_dataset') }} as o
 ),
 
 --# ARRAY_AGG(product_id) AS product_ids or GROUP_CONCAT(product_id) AS product_ids to add product and seller info
@@ -29,7 +29,7 @@ order_items_agg as (
         sum(oi.price) as total_order_revenue,
         sum(oi.freight_value) as total_freight_cost,
         avg(oi.price) as avg_item_price
-    from {{ source('data_source', 'order_items') }} as oi
+    from {{ source('gcs_ingestion', 'olist_order_items_dataset') }} as oi
     group by oi.order_id
 )
 

@@ -1,11 +1,11 @@
 version: 2
 
 sources:
-  - name: data_source  # Logical name for the source
-    database: dsai-module2-assignment-david  # BigQuery project ID
-    schema: sales  # BigQuery dataset name
+  - name: gcs_ingestion  # Logical name for the source
+    database: dsai-g3-m2-project  # BigQuery project ID
+    schema: gcs_ingestion  # BigQuery dataset name
     tables:
-      - name: orders  # Table name in BigQuery
+      - name: olist_orders_dataset  # Table name in BigQuery
         description: "Order transactions data"
         columns:
           - name: order_id
@@ -31,7 +31,7 @@ sources:
             description: "Timestamp when the order was delivered to the customer"
           - name: order_estimated_delivery_date
             description: "Estimated delivery date for the order"
-      - name: order_items  # Name of the table in BigQuery
+      - name: olist_order_items_dataset  # Name of the table in BigQuery
         description: "Contains order item details for e-commerce orders."
         columns:
           - name: order_id
@@ -56,3 +56,7 @@ sources:
               - not_null
           - name: freight_value
             description: "Freight cost associated with the order item."
+      - name: olist_products_dataset  # Table name in BigQuery
+        description: "Products data"
+      - name: product_category_name_translation  # Table name in BigQuery
+        description: "Category name mapping data"

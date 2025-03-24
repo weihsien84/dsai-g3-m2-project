@@ -1,0 +1,45 @@
+
+version: 2
+
+models:
+  - name: dim_products
+    description: "Dimension table for products"
+    columns:
+      - name: product_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: product_category_name
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: product_name_length
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: product_description_length
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: product_photos_qty
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: product_weight_g
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: product_length_cm
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: product_height_cm
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: product_width_cm
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      

@@ -2038,3 +2038,286 @@ from order_details od join order_items_agg oia
 [0m14:47:09.016062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064341a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144f834d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a40320>]}
 [0m14:47:09.016206 [debug] [MainThread]: Flushing usage events
 [0m14:47:10.179152 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:34:52.723596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefbb3bd300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefbc207820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefbc2077f0>]}
+
+
+============================== 22:34:52.733571 | d229479e-91ce-401d-9aba-0d27a3992d30 ==============================
+[0m22:34:52.733571 [info ] [MainThread]: Running with dbt=1.9.2
+[0m22:34:52.737107 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt/logs', 'debug': 'False', 'profiles_dir': '/mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:34:55.872778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd229479e-91ce-401d-9aba-0d27a3992d30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefb2b6b8e0>]}
+[0m22:34:56.049057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd229479e-91ce-401d-9aba-0d27a3992d30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefbab73b80>]}
+[0m22:34:56.053468 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m22:34:56.315685 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m22:34:56.622109 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m22:34:56.625745 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m22:34:56.629390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd229479e-91ce-401d-9aba-0d27a3992d30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefbabac520>]}
+[0m22:35:00.088081 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_first_dbt_model' in the 'models' section of file 'models/star_fact/schema.yml'
+[0m22:35:00.093890 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_second_dbt_model' in the 'models' section of file 'models/star_fact/schema.yml'
+[0m22:35:00.207408 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.ec_sales.fact_orders' (models/star_fact/fact_orders.sql) depends on a source named 'gcs_ingestion.olist_order_items_dataset' which was not found
+[0m22:35:00.213548 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 7.677649, "process_in_blocks": "166544", "process_kernel_time": 1.744525, "process_mem_max_rss": "164436", "process_out_blocks": "0", "process_user_time": 8.782783}
+[0m22:35:00.217946 [debug] [MainThread]: Command `dbt run` failed at 22:35:00.216544 after 7.68 seconds
+[0m22:35:00.223398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefbb3bd300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefb1449a20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fefb14499f0>]}
+[0m22:35:00.228412 [debug] [MainThread]: Flushing usage events
+[0m22:35:01.334157 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:35:53.474305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77f9a1360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb7807b78b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb7807b7850>]}
+
+
+============================== 22:35:53.484219 | 6e736ef0-1867-48ba-a5d9-0c7e1a967520 ==============================
+[0m22:35:53.484219 [info ] [MainThread]: Running with dbt=1.9.2
+[0m22:35:53.487874 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:35:55.974170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6e736ef0-1867-48ba-a5d9-0c7e1a967520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb7807cf670>]}
+[0m22:35:56.154196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6e736ef0-1867-48ba-a5d9-0c7e1a967520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77f137be0>]}
+[0m22:35:56.159450 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m22:35:56.447681 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m22:35:56.918653 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m22:35:56.923898 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m22:35:56.930194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6e736ef0-1867-48ba-a5d9-0c7e1a967520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77f170730>]}
+[0m22:36:00.856346 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_first_dbt_model' in the 'models' section of file 'models/star_fact/schema.yml'
+[0m22:36:00.862305 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_second_dbt_model' in the 'models' section of file 'models/star_fact/schema.yml'
+[0m22:36:00.974547 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.ec_sales.unique_my_first_dbt_model_id.16e066b321' (models/star_fact/schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m22:36:00.978261 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.ec_sales.not_null_my_first_dbt_model_id.5fb22c2710' (models/star_fact/schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m22:36:00.982426 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.ec_sales.unique_my_second_dbt_model_id.57a0f8c493' (models/star_fact/schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m22:36:00.987692 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.ec_sales.not_null_my_second_dbt_model_id.151b76d778' (models/star_fact/schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m22:36:01.303300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6e736ef0-1867-48ba-a5d9-0c7e1a967520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb775968d30>]}
+[0m22:36:01.593108 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt/target/manifest.json
+[0m22:36:01.614581 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt/target/semantic_manifest.json
+[0m22:36:01.700588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6e736ef0-1867-48ba-a5d9-0c7e1a967520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77592fcd0>]}
+[0m22:36:01.704028 [info ] [MainThread]: Found 2 models, 18 data tests, 4 sources, 491 macros
+[0m22:36:01.707218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6e736ef0-1867-48ba-a5d9-0c7e1a967520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77592fac0>]}
+[0m22:36:01.715427 [info ] [MainThread]: 
+[0m22:36:01.720088 [info ] [MainThread]: Concurrency: 1 threads (target='jaffle_sql')
+[0m22:36:01.726684 [info ] [MainThread]: 
+[0m22:36:01.731028 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:36:01.744375 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dsai-g3-m2-project'
+[0m22:36:01.747763 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:36:02.433023 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dsai-g3-m2-project, now create_dsai-g3-m2-project_brazilian-ecommerce-sales)
+[0m22:36:02.437131 [debug] [ThreadPool]: Creating schema "database: "dsai-g3-m2-project"
+schema: "brazilian-ecommerce-sales"
+"
+[0m22:36:02.464791 [debug] [ThreadPool]: On create_dsai-g3-m2-project_brazilian-ecommerce-sales: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "ec_sales", "target_name": "jaffle_sql", "connection_name": "create_dsai-g3-m2-project_brazilian-ecommerce-sales"} */
+create schema if not exists `dsai-g3-m2-project`.`brazilian-ecommerce-sales`
+  
+[0m22:36:02.467997 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:36:03.491340 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dsai-g3-m2-project&j=bq:US:8a05ef9a-87b1-42f8-9687-19f653e39cca&page=queryresults
+[0m22:36:03.811742 [error] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dsai-g3-m2-project&j=bq:US:8a05ef9a-87b1-42f8-9687-19f653e39cca&page=queryresults
+[0m22:36:03.818090 [debug] [ThreadPool]: BigQuery adapter: Unhandled error while running:
+macro create_schema
+[0m22:36:03.821445 [debug] [ThreadPool]: BigQuery adapter: Database Error
+  Invalid dataset ID "brazilian-ecommerce-sales". Dataset IDs must be alphanumeric (plus underscores) and must be at most 1024 characters long.
+[0m22:36:03.826908 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:36:03.904066 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:36:03.907024 [debug] [MainThread]: Connection 'create_dsai-g3-m2-project_brazilian-ecommerce-sales' was properly closed.
+[0m22:36:03.910417 [info ] [MainThread]: 
+[0m22:36:03.914271 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 2.18 seconds (2.18s).
+[0m22:36:03.919383 [error] [MainThread]: Encountered an error:
+Database Error
+  Invalid dataset ID "brazilian-ecommerce-sales". Dataset IDs must be alphanumeric (plus underscores) and must be at most 1024 characters long.
+[0m22:36:03.927750 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 10.608477, "process_in_blocks": "169672", "process_kernel_time": 1.576335, "process_mem_max_rss": "168920", "process_out_blocks": "0", "process_user_time": 9.763112}
+[0m22:36:03.933427 [debug] [MainThread]: Command `dbt run` failed at 22:36:03.931271 after 10.61 seconds
+[0m22:36:03.937704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77f9a1360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb777590af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb77592ecb0>]}
+[0m22:36:03.942608 [debug] [MainThread]: Flushing usage events
+[0m22:36:04.977038 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:36:58.722998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb348e5330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb3572f880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb3572f820>]}
+
+
+============================== 22:36:58.733407 | 86976827-09fe-4089-8880-1987d31a56a2 ==============================
+[0m22:36:58.733407 [info ] [MainThread]: Running with dbt=1.9.2
+[0m22:36:58.737349 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt', 'log_path': '/mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m22:37:00.141880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '86976827-09fe-4089-8880-1987d31a56a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb357463e0>]}
+[0m22:37:00.364990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '86976827-09fe-4089-8880-1987d31a56a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb2c125120>]}
+[0m22:37:00.375815 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m22:37:00.789101 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m22:37:01.139476 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m22:37:01.143652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '86976827-09fe-4089-8880-1987d31a56a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb340d4760>]}
+[0m22:37:04.719995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '86976827-09fe-4089-8880-1987d31a56a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb26860250>]}
+[0m22:37:04.972386 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt/target/manifest.json
+[0m22:37:04.990735 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt/target/semantic_manifest.json
+[0m22:37:05.046388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '86976827-09fe-4089-8880-1987d31a56a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb268a9060>]}
+[0m22:37:05.050132 [info ] [MainThread]: Found 2 models, 18 data tests, 4 sources, 491 macros
+[0m22:37:05.053334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86976827-09fe-4089-8880-1987d31a56a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb268a92d0>]}
+[0m22:37:05.062718 [info ] [MainThread]: 
+[0m22:37:05.066376 [info ] [MainThread]: Concurrency: 1 threads (target='jaffle_sql')
+[0m22:37:05.070425 [info ] [MainThread]: 
+[0m22:37:05.074506 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:37:05.088845 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dsai-g3-m2-project'
+[0m22:37:05.091962 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:37:05.739631 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dsai-g3-m2-project, now create_dsai-g3-m2-project_brazilian_ecommerce_sales)
+[0m22:37:05.743687 [debug] [ThreadPool]: Creating schema "database: "dsai-g3-m2-project"
+schema: "brazilian_ecommerce_sales"
+"
+[0m22:37:05.768644 [debug] [ThreadPool]: On create_dsai-g3-m2-project_brazilian_ecommerce_sales: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "ec_sales", "target_name": "jaffle_sql", "connection_name": "create_dsai-g3-m2-project_brazilian_ecommerce_sales"} */
+create schema if not exists `dsai-g3-m2-project`.`brazilian_ecommerce_sales`
+  
+[0m22:37:05.771745 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:37:06.750423 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dsai-g3-m2-project&j=bq:US:924a44fc-674c-4b43-9d90-1a07371a319d&page=queryresults
+[0m22:37:07.820573 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dsai-g3-m2-project_brazilian_ecommerce_sales, now list_dsai-g3-m2-project_brazilian_ecommerce_sales)
+[0m22:37:07.823886 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:37:08.519534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86976827-09fe-4089-8880-1987d31a56a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb357b9210>]}
+[0m22:37:08.522828 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:37:08.604738 [debug] [Thread-1 (]: Began running node model.ec_sales.dim_products
+[0m22:37:08.608037 [info ] [Thread-1 (]: 1 of 2 START sql table model brazilian_ecommerce_sales.dim_products ............ [RUN]
+[0m22:37:08.612470 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dsai-g3-m2-project_brazilian_ecommerce_sales, now model.ec_sales.dim_products)
+[0m22:37:08.615680 [debug] [Thread-1 (]: Began compiling node model.ec_sales.dim_products
+[0m22:37:08.643052 [debug] [Thread-1 (]: Writing injected SQL for node "model.ec_sales.dim_products"
+[0m22:37:08.683356 [debug] [Thread-1 (]: Began executing node model.ec_sales.dim_products
+[0m22:37:08.766267 [debug] [Thread-1 (]: Writing runtime sql for node "model.ec_sales.dim_products"
+[0m22:37:08.806277 [debug] [Thread-1 (]: On model.ec_sales.dim_products: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "ec_sales", "target_name": "jaffle_sql", "node_id": "model.ec_sales.dim_products"} */
+
+  
+    
+
+    create or replace table `dsai-g3-m2-project`.`brazilian_ecommerce_sales`.`dim_products`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+WITH product_details AS (
+    SELECT
+        product_id,
+        product_category_name,
+        product_name_lenght AS product_name_length,
+        product_description_lenght AS product_description_length,
+        product_photos_qty,
+        product_weight_g,
+        product_length_cm,
+        product_height_cm,
+        product_width_cm,
+        (product_length_cm * product_height_cm * product_width_cm) AS product_volume_cm3,
+    FROM `dsai-g3-m2-project`.`gcs_ingestion`.`olist_products_dataset`
+),
+
+category_name_translation AS (
+    SELECT
+        string_field_0 AS product_category_name_pt,
+        string_field_1 AS product_category_name_en
+    FROM `dsai-g3-m2-project`.`gcs_ingestion`.`product_category_name_translation`
+)
+
+SELECT 
+    p.product_id,
+    COALESCE(cnt.product_category_name_en, 'others') AS product_category_name,
+    COALESCE(p.product_name_length, 0) AS product_name_length,
+    COALESCE(p.product_description_length, 0) AS product_description_length,
+    COALESCE(p.product_photos_qty, 0) AS product_photos_qty,
+    p.product_weight_g,
+    p.product_length_cm,
+    p.product_height_cm,
+    p.product_width_cm,
+    p.product_volume_cm3,
+FROM product_details p LEFT JOIN category_name_translation cnt
+ON p.product_category_name = cnt.product_category_name_pt
+WHERE p.product_weight_g IS NOT NULL
+AND p.product_length_cm IS NOT NULL
+AND p.product_height_cm IS NOT NULL
+AND p.product_width_cm IS NOT NULL
+AND p.product_volume_cm3 IS NOT NULL
+    );
+  
+[0m22:37:08.809710 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:37:09.677348 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dsai-g3-m2-project&j=bq:US:89b7cd02-9dc8-4f53-8621-2341c8c339ce&page=queryresults
+[0m22:37:12.932575 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86976827-09fe-4089-8880-1987d31a56a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb2c0b16c0>]}
+[0m22:37:12.937201 [info ] [Thread-1 (]: 1 of 2 OK created sql table model brazilian_ecommerce_sales.dim_products ....... [[32mCREATE TABLE (32.9k rows, 3.3 MiB processed)[0m in 4.32s]
+[0m22:37:12.941243 [debug] [Thread-1 (]: Finished running node model.ec_sales.dim_products
+[0m22:37:12.946081 [debug] [Thread-1 (]: Began running node model.ec_sales.fact_orders
+[0m22:37:12.949625 [info ] [Thread-1 (]: 2 of 2 START sql table model brazilian_ecommerce_sales.fact_orders ............. [RUN]
+[0m22:37:12.953704 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ec_sales.dim_products, now model.ec_sales.fact_orders)
+[0m22:37:12.957773 [debug] [Thread-1 (]: Began compiling node model.ec_sales.fact_orders
+[0m22:37:12.972408 [debug] [Thread-1 (]: Writing injected SQL for node "model.ec_sales.fact_orders"
+[0m22:37:13.013543 [debug] [Thread-1 (]: Began executing node model.ec_sales.fact_orders
+[0m22:37:13.023289 [debug] [Thread-1 (]: Writing runtime sql for node "model.ec_sales.fact_orders"
+[0m22:37:13.063396 [debug] [Thread-1 (]: On model.ec_sales.fact_orders: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "ec_sales", "target_name": "jaffle_sql", "node_id": "model.ec_sales.fact_orders"} */
+
+  
+    
+
+    create or replace table `dsai-g3-m2-project`.`brazilian_ecommerce_sales`.`fact_orders`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+
+with order_details as (
+    select
+        o.order_id,
+        o.customer_id,
+        o.order_status,
+        o.order_purchase_timestamp,
+        o.order_delivered_customer_date,
+        o.order_estimated_delivery_date
+    from `dsai-g3-m2-project`.`gcs_ingestion`.`olist_orders_dataset` as o
+),
+
+--# ARRAY_AGG(product_id) AS product_ids or GROUP_CONCAT(product_id) AS product_ids to add product and seller info
+order_items_agg as (
+    select
+        oi.order_id,
+        count(*) as num_items,
+        sum(oi.price) as total_order_revenue,
+        sum(oi.freight_value) as total_freight_cost,
+        avg(oi.price) as avg_item_price
+    from `dsai-g3-m2-project`.`gcs_ingestion`.`olist_order_items_dataset` as oi
+    group by oi.order_id
+)
+
+select
+    od.order_id,
+    od.customer_id,
+    od.order_status,
+    od.order_purchase_timestamp,
+    od.order_delivered_customer_date,
+    od.order_estimated_delivery_date,
+    oia.num_items,
+    oia.total_order_revenue,
+    oia.total_freight_cost,
+    oia.avg_item_price,
+    -- Calculate delivery performance: total time from purchase to customer delivery
+    case 
+        when od.order_delivered_customer_date is not null then 
+            timestamp_diff(od.order_delivered_customer_date, od.order_purchase_timestamp, minute)
+        else null
+    end as delivery_time_minutes
+from order_details od join order_items_agg oia
+    on od.order_id = oia.order_id
+    );
+  
+[0m22:37:13.068010 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:37:13.922844 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dsai-g3-m2-project&j=bq:US:47fa89e7-d72c-4e05-b036-9d5bebf0bb3d&page=queryresults
+[0m22:37:19.002079 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86976827-09fe-4089-8880-1987d31a56a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb268e5f90>]}
+[0m22:37:19.006785 [info ] [Thread-1 (]: 2 of 2 OK created sql table model brazilian_ecommerce_sales.fact_orders ........ [[32mCREATE TABLE (98.7k rows, 15.1 MiB processed)[0m in 6.05s]
+[0m22:37:19.011026 [debug] [Thread-1 (]: Finished running node model.ec_sales.fact_orders
+[0m22:37:19.017181 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:37:19.103177 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:37:19.107034 [debug] [MainThread]: Connection 'model.ec_sales.fact_orders' was properly closed.
+[0m22:37:19.110671 [info ] [MainThread]: 
+[0m22:37:19.114289 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 14.04 seconds (14.04s).
+[0m22:37:19.119506 [debug] [MainThread]: Command end result
+[0m22:37:19.256449 [debug] [MainThread]: Wrote artifact WritableManifest to /mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt/target/manifest.json
+[0m22:37:19.272432 [debug] [MainThread]: Wrote artifact SemanticManifest to /mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt/target/semantic_manifest.json
+[0m22:37:19.306538 [debug] [MainThread]: Wrote artifact RunExecutionResult to /mnt/c/Users/dylon/OneDrive/Desktop/NTU_SCTP_DSAI/Github/dsai-g3-m2-project/e-commerce-dbt/target/run_results.json
+[0m22:37:19.309977 [info ] [MainThread]: 
+[0m22:37:19.314443 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:37:19.317774 [info ] [MainThread]: 
+[0m22:37:19.322442 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m22:37:19.328821 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 20.778, "process_in_blocks": "1656", "process_kernel_time": 1.025226, "process_mem_max_rss": "179848", "process_out_blocks": "0", "process_user_time": 9.669296}
+[0m22:37:19.334592 [debug] [MainThread]: Command `dbt run` succeeded at 22:37:19.334215 after 20.78 seconds
+[0m22:37:19.337495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb348e5330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb27b891e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb268790f0>]}
+[0m22:37:19.342158 [debug] [MainThread]: Flushing usage events
+[0m22:37:20.596580 [debug] [MainThread]: An error was encountered while trying to flush usage events
