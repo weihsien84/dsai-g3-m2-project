@@ -1,15 +1,5 @@
 
-  
-    
-
-    create or replace table `dsai-module2-assignment-david`.`sales`.`fact_orders`
-      
-    
-    
-
-    OPTIONS()
-    as (
-      /*
+/*
     Welcome to your first dbt model!
     Did you know that you can also configure models directly within SQL files?
     This will override configurations stated in dbt_project.yml
@@ -17,7 +7,7 @@
     Try changing "table" to "view" below
 */
 
-
+{{ config(materialized='table') }}
 
 
 with order_details as (
@@ -28,7 +18,7 @@ with order_details as (
         o.order_purchase_timestamp,
         o.order_delivered_customer_date,
         o.order_estimated_delivery_date
-    from `dsai-module2-assignment-david`.`sales`.`orders` as o
+    from {{ source('gcs_ingestion', 'olist_orders_dataset') }} as o
 ),
 
 --# ARRAY_AGG(product_id) AS product_ids or GROUP_CONCAT(product_id) AS product_ids to add product and seller info
@@ -39,7 +29,7 @@ order_items_agg as (
         sum(oi.price) as total_order_revenue,
         sum(oi.freight_value) as total_freight_cost,
         avg(oi.price) as avg_item_price
-    from `dsai-module2-assignment-david`.`sales`.`order_items` as oi
+    from {{ source('gcs_ingestion', 'olist_order_items_dataset') }} as oi
     group by oi.order_id
 )
 
@@ -62,5 +52,3 @@ select
     end as delivery_time_minutes
 from order_details od join order_items_agg oia
     on od.order_id = oia.order_id
-    );
-  

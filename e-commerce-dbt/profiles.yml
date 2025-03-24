@@ -1,0 +1,15 @@
+# https://docs.getdbt.com/docs/core/connect-data-platform/bigquery-setup
+ec_sales: # dbt_demo name. This is where dbt looks for from dbt_project.yml -> find the named profile here. Can also be overwritten by dbt run --profiles. See dbt run --help for more info
+  target: jaffle_sql # default target for profile, points to 1 of the output below # define target in dbt CLI via --target
+  outputs:
+    threads: 1
+    location: US
+    jaffle_sql:
+      type: bigquery
+      method: service-account
+      project: dsai-g3-m2-project
+      dataset: brazilian_ecommerce_sales
+      retries: 2
+      keyfile: ../dsai-g3-m2-project-4ec07ed7098f.json
+  config:
+    send_anonymous_usage_stats: False

@@ -1,1 +1,5 @@
 dsai-g3-m2-project-*.json
+*target/
+*dbt_packages/
+*logs/
+*.user.yml
